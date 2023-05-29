@@ -50,7 +50,6 @@ const validateCred = card => {
 		and minus the first/current element the loop starts with, 
 		equals 1 (meaning, it is not an odd number), 
 		multiply the current element per 2. 
-		(*) More info about this condition below. 
 		*/
     if ((card.length - 1 - i) % 2 === 1) {
       currElement *= 2;
@@ -126,7 +125,7 @@ Currently, there are 4 accepted companies which each have unique first digits. T
 
 If the number doesn’t start with any of the numbers listed, print out a message like: “Company not found”.
 `idInvalidCardCompanies()` should return an array of companies that have mailed out cards with invalid numbers. 
-This array should NOT contain duplicates, i.e. even if there are two invalid Visa cards, `"Visa"` should only appear once in the array.
+This array should NOT contain duplicates, i.e. even if there are two invalid Visa cards, "Visa" should only appear once in the array.
 */
 
 // (3) func: FIND INVALID CARD COMPANIES
@@ -136,7 +135,7 @@ const idInvalidCardCompanies = cards => {
     // cards[i][0] because we only want to check the first digit
     switch (cards[i][0]) {
       case 3:
-      // **(*)** the -1 in these conditions is used to check if the Company's value is not found in the companies array.
+      // the -1 in these conditions is used to check if the Company's value is not found in the companies array.
         if (companies.indexOf('Amex') === -1) {
           companies.push('Amex');
         }
