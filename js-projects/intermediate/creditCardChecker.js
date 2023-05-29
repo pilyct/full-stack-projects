@@ -70,3 +70,99 @@ const validateCred = card => {
 // TEST
 console.log(validateCred(valid1)); // prints true
 console.log(validateCred(invalid1)); // prints false
+
+
+
+/*
+Now, create another function, `findInvalidCards()` that has one parameter for a nested array of credit card numbers. 
+The role of `findInvalidCards()` is to check through the nested array for which numbers are invalid, and return another nested array of invalid cards.
+*/
+
+// (2) func: FIND INVALID CREDIT CARDS
+// Use the same data from the last function.
+
+const findInvalidCards = cards => {
+  // new array with the list of cards that are invalid.
+  const invalidCards = []; 
+
+  // loop through the nested array.
+  for (let i = 0; i < cards.length; i++) {
+    let currCard = cards[i]; // this variable stands for each element (or array) from the array. Also, it will be used to apply the validateCred() function later.
+
+    // If the value of the currCard is False (!), we push this value to the new array declared at the beginning. 
+    if (!validateCred(currCard)) {
+      invalidCards.push(currCard);
+    }
+  }
+  // After, return this new array with the list of invalid cards
+  return invalidCards;
+}
+
+// TEST
+console.log(findInvalidCards(batch));
+/*
+prints a nested array with the digits of the invalid cards:
+[ [ 4, 5, 3, 2, 7, 7, 8, 7, 7, 1, 0, 9, 1, 7, 9, 5 ],
+  [ 5, 7, 9, 5, 5, 9, 3, 3, 9, 2, 1, 3, 4, 6, 4, 3 ],
+  [ 3, 7, 5, 7, 9, 6, 0, 8, 4, 4, 5, 9, 9, 1, 4 ],
+  [ 6, 0, 1, 1, 1, 2, 7, 9, 6, 1, 7, 7, 7, 9, 3, 5 ],
+  [ 5, 3, 8, 2, 0, 1, 9, 7, 7, 2, 8, 8, 3, 8, 5, 4 ],
+  [ 3, 4, 4, 8, 0, 1, 9, 6, 8, 3, 0, 5, 4, 1, 4 ],
+  [ 6, 0, 1, 1, 3, 7, 7, 0, 2, 0, 9, 6, 2, 6, 5, 6, 2, 0, 3 ],
+  [ 4, 9, 2, 9, 8, 7, 7, 1, 6, 9, 2, 1, 7, 0, 9, 3 ] ]
+*/
+
+/*
+After finding all the invalid credit card numbers, it’s also necessary to identify the credit card companies that have possibly issued these faulty numbers. 
+Create a function, `idInvalidCardCompanies()` that has one parameter for a nested array of invalid numbers and returns an array of companies.
+Currently, there are 4 accepted companies which each have unique first digits. The following table shows which digit is unique to which company:
+
+| First Digit | Company |
+| --- | --- |
+| 3 | Amex (American Express) |
+| 4 | Visa |
+| 5 | Mastercard |
+| 6 | Discover |
+
+If the number doesn’t start with any of the numbers listed, print out a message like: “Company not found”.
+`idInvalidCardCompanies()` should return an array of companies that have mailed out cards with invalid numbers. 
+This array should NOT contain duplicates, i.e. even if there are two invalid Visa cards, `"Visa"` should only appear once in the array.
+*/
+
+// (3) func: FIND INVALID CARD COMPANIES
+const idInvalidCardCompanies = cards => {
+  const companies = [];
+  for (let i = 0; i < cards.length; i++) {
+    // cards[i][0] because we only want to check the first digit
+    switch (cards[i][0]) {
+      case 3:
+      // **(*)** the -1 in these conditions is used to check if the Company's value is not found in the companies array.
+        if (companies.indexOf('Amex') === -1) {
+          companies.push('Amex');
+        }
+        break
+      case 4:
+        if (companies.indexOf('Visa') === -1) {
+          companies.push('Visa');
+        }
+        break
+      case 5:
+        if (companies.indexOf('Mastercard') === -1) {
+          companies.push('Mastercard');
+        }
+        break
+      case 6:
+        if (companies.indexOf('Discover') === -1) {
+          companies.push('Discover');
+        }
+        break
+      default:
+        console.log('Company not found');
+    }
+  }
+  return companies;
+}
+
+// TEST
+console.log(idInvalidCardCompanies(batch)); // prints [ 'Visa', 'Mastercard', 'Amex', 'Discover' ]
+console.log(idInvalidCardCompanies([mystery5])); // prints [ 'Visa' ]
