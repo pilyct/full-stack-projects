@@ -44,7 +44,7 @@ const validateCred = card => {
   for (let i = card.length - 1; i >= 0; i--) {
     let currElement = card[i]; // variable to define each element of the array to apply later calculations.
 
-    /* 
+        /* 
 		if the modulo (by 2) of the length of my card, 
 		minus 1 (meaning, the array starts being counted from the right - reverse order) 
 		and minus the first/current element the loop starts with, 
