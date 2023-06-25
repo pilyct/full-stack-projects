@@ -1,3 +1,3 @@
 # full-stack-projects
 
-The source code for a few of the tasks from the CodeAcademy Full-Stack Engineer career path can be found in this repository.
+In this repository it can be found the source code of some JS projects and tasks from CodeAcademy - Full Stack Engineer course.
