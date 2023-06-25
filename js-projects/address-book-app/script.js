@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    // --------------------------------------------------------------
+    // EVENT FUNCTIONS
     // Add Contact button click event
     $("#addContact").click(function () {
       $("#contactForm").show();
