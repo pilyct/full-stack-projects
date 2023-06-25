@@ -1,0 +1,355 @@
+/* ------ General Style ------ */
+* {
+    font-family: Arial, sans-serif;
+    /*border: 1px solid red;*/
+    
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+  
+
+
+/* ------ Navbar Style ------ */
+nav{
+  border-bottom: 1px solid rgba(22,160,181, 0.2);
+}
+
+.navbar-brand {
+  text-shadow: 2px 0 #16a0b5, -2px 0 #16a0b5, 0 2px #16a0b5, 0 -2px #16a0b5,
+           1px 1px #16a0b5, -1px -1px #16a0b5, 1px -1px #16a0b5, -1px 1px #16a0b5;  
+}
+
+.profile{
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+
+}
+
+#settings-icon{
+  position: relative;
+  top: 3px;
+  right: 10px;
+  margin-top: 10px;
+}
+
+
+img {
+  border-radius: 50%;
+  padding: 1px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#navbarPic span{
+  display: none;
+  position: absolute;
+  bottom: 5;
+  left: 200;
+  right: 20;
+  font-size: 10px;
+  font-weight: 400;
+  background: rgba(52,58,64, 0.8);
+  color: #19b6ce;
+  width: 50px;
+  text-align: center;
+  border: 0.2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10%;
+  box-shadow: 1px 1px 5px 5px rgba(255, 255, 255, 0.1);
+}
+
+#navbarPic:hover span{
+  display: block;
+}
+
+#navbarPic{
+  position: relative;
+  width: 100%; /* Set the container width to 100% */
+  height: auto; /* Set the container height to auto */
+}
+
+#dot{
+  background-color: #2bdfe5;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgb(52,58,64);
+  left: 70%;
+  bottom:3px;
+}
+
+/* ------ All Content Style ------ */
+#all-content{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%; /* Set the container width to 100% */
+  height: auto; /* Set the container height to auto */
+}
+
+
+/* ------ Breadcrumb Style ------ */
+#breadcrumb {
+  font-size: 13px;
+  background-color: #fff;
+  padding: 20px 0;
+}
+
+#breadcrumb ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#breadcrumb li {
+  display: inline-block;
+}
+
+#breadcrumb li:not(:last-child)::after { /* This targets all list items except the last one & adds the slash separator */
+  content: "/";
+  margin: 0 5px;
+}
+
+#breadcrumb li a {
+  color: #716e6e;
+  text-decoration: none;
+}
+
+#breadcrumb li a:hover {
+  text-decoration: underline;
+}
+
+/* ------ Note Style ------ */
+#note{
+  background-color: rgba(22,160,181, 0.2);
+  border: 1.3px solid rgb(22,160,181);
+  border-radius: 5px;
+  width: 760px;
+  height: 45px;
+  padding: 5px;
+  text-align: left;
+}
+
+#note p{
+  font-family: 'Courier New', Courier, monospace;
+  padding: 5px;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgb(19, 129, 146);
+
+}
+
+
+/* ------ Sidebar Style ------ */
+.sidebar{
+  margin: 0;
+  flex: 0 0 200px; /* Fixed width for the first div */
+  background-color:#343a40;
+  box-shadow: 2px 2px 10px 5px rgba(14, 61, 68, 0.3);
+  justify-content: space-between;
+  
+}
+
+#sidebar-w-icon, #sidebar-w-icon-active{
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+
+}
+
+#sidebar-w-icon-active{
+  background-color:rgba(22,160,181, 0.1);
+}
+
+.material-icons{
+  position: relative;
+  top: 5px;
+  left: 0px;
+}
+
+.sidebar-link, .sidebar-link-active{
+  display: block;
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+
+}
+.sidebar-link:hover, .sidebar-link-active:hover {
+  text-decoration: none;
+  color: rgb(27,182,206);
+}
+
+.sidebar-link-active{
+  color: #19b6ce;
+}
+
+/* ------ Sidebar Footer Style ------ */
+#footer{
+  position: absolute;
+  width: 180px;
+  bottom: 0px;
+  left: 6px;
+  text-align: center;
+  padding: 10px;
+}
+
+#footer p {
+  color: #daf4f7;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+
+/* ------ Contact Info Style ------ */
+#contactInfo{
+  flex: 0 0 0;
+  box-shadow: 5px 1px 10px 10px rgba(14, 61, 68, 0.1);
+}
+
+#profile{
+  display: block;
+  text-align: center;
+  padding: 20px;
+  width: max-content;
+}
+
+#profile h6{
+  font-size: 11px; 
+  font-weight: 300; 
+}
+
+#profile ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#profile li{
+  font-size: 15px;
+  width: max-content;  
+}
+
+#listTitle{
+  font-size: 18px;
+  color: #16a0b5;
+  font-weight: 500;
+
+}
+
+/* ------ Container Style ------ */
+.container {
+  flex-grow: 1; /* Third div expands to take remaining space */
+  margin: 0 auto;
+  padding: 20px
+}
+
+#top-container-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+#search {
+  text-align: right;
+}
+
+#contactForm {
+  margin-bottom: 20px;
+}
+
+/* ------ Table Style ------ */
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgba(222, 229, 237, 0.3);
+}
+  
+tbody tr:nth-child(even) {
+    background-color: rgba(24, 63, 71, 0.2);
+}
+
+table th,
+table td {
+  padding: 20px;
+}
+
+table th{
+  cursor: pointer;
+}
+
+.contact-cell{
+  background-color: transparent;
+}
+
+/* ------ Buttons Style ------ */
+.btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  width: 130px;
+  background-color: #16a0b5;
+  color: #fff;
+}
+
+#searchInput{
+  width: 500px;
+}
+
+#cancelForm{
+  background-color: #dae1e2;
+  color: #000;
+}
+
+.editContact:focus, .deleteContact:focus,.contact-cell:focus{
+  outline: none;
+}
+
+.editContact, .deleteContact, .contact-cell{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+#closeForm, #closeInfo{
+  font-size: 30px;
+  margin: 3px;
+  cursor: pointer;
+}
+
+#closeInfo{
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
+/* ------ Form Style ------ */
+#form-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+   
+
+  
