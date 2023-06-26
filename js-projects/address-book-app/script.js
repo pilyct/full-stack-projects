@@ -234,6 +234,7 @@ $(document).ready(function () {
 
 
     // --------------------------------------------------------------
+    // DATA SAMPLES
     // Initialize the contact list
     var contactList = [];
     var selectedContactIndex = null;

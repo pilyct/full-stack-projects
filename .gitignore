@@ -1,5 +1,7 @@
 *.xlsx
 *.csv
+*.txt
+*.zip
 .vscode/
 venv
 test/
