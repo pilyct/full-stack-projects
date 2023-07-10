@@ -1,0 +1,42 @@
+.box {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.box .inner {
+    height: 200px;
+    overflow-y: auto;  
+
+}
+
+.box .inner .message {
+    border: 1px solid #ccc;
+    padding: 2px 4px;
+    margin: 2px 2px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    /* word-wrap: break-word; property allows long words to break and wrap to the next line if needed, ensuring that the messages stay within the container's width. */
+}
+
+.short {
+    background-color: lightblue;
+    max-width: 100px;
+}
+  
+.medium {
+    background-color: lightgreen;
+    max-width: 150px;
+}
+
+.long {
+    background-color: lightcoral;
+    max-width: 250px;
+}
+
+input{
+    border-radius: 3px;
+}
+
