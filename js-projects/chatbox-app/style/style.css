@@ -12,7 +12,8 @@
 
 .box .inner .message {
     border: 1px solid #ccc;
-    padding: 2px 4px;
+    border-radius: 15px;
+    padding: 2px 10px;
     margin: 2px 2px;
 
     overflow: hidden;
