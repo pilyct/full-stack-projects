@@ -1,3 +1,4 @@
+/* Box & Co. */
 .box {
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -22,6 +23,7 @@
     /* word-wrap: break-word; property allows long words to break and wrap to the next line if needed, ensuring that the messages stay within the container's width. */
 }
 
+/* Message Sizes */
 .short {
     background-color: lightblue;
     max-width: 100px;
@@ -37,6 +39,7 @@
     max-width: 250px;
 }
 
+/* Input */
 input{
     border-radius: 3px;
 }
